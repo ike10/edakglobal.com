@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EDAK Global Services - Premier marine logistics, expatriate workforce management, and regulatory compliance solutions for international companies in Nigeria">
+    <meta name="keywords" content="Nigeria marine logistics, expatriate services, maritime compliance, labor supply, offshore operations">
+    <title>EDAK Global Services - Marine & Logistics Excellence</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-green: #1e3a2f;
+            --deep-green: #152e23;
+            --accent-gold: #d4af37;
+            --accent-copper: #b87333;
+            --dark-forest: #2c5040;
+            --medium-sage: #495755;
+            --light-sage: #6c7a76;
+            --off-white: #f8f9fa;
+            --warm-gray: #e9ecef;
+            --border-gray: #dee2e6;
+            --white: #ffffff;
+            --success-teal: #20c997;
+            --gradient-primary: linear-gradient(135deg, #1e3a2f 0%, #2c5040 100%);
+            --gradient-accent: linear-gradient(135deg, #d4af37 0%, #b87333 100%);
+            --shadow-primary: rgba(30, 58, 47, 0.15);
+            --shadow-accent: rgba(212, 175, 55, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-green);
+            background: var(--white);
+        }
+
+        /* Enhanced Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(30, 58, 47, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(21, 46, 35, 0.98);
+            box-shadow: 0 4px 20px rgba(30, 58, 47, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gradient-accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px var(--shadow-accent);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px var(--shadow-accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--deep-green) 0%, var(--primary-green) 50%, var(--dark-forest) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="0.8" fill="%23d4af37" opacity="0.08"/><circle cx="80" cy="40" r="0.8" fill="%23d4af37" opacity="0.08"/><circle cx="40" cy="80" r="0.8" fill="%23d4af37" opacity="0.08"/><circle cx="60" cy="15" r="0.6" fill="%23d4af37" opacity="0.06"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content {
+            opacity: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--accent-gold);
+            color: var(--deep-green);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px var(--shadow-accent);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px var(--shadow-accent);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1rem 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--accent-gold);
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            color: white;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .metric-card .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .metric-card h3 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .metric-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 4rem 0;
+            background: var(--warm-gray);
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .trust-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .trust-text {
+            font-size: 0.9rem;
+            color: var(--medium-sage);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-gray);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .trust-badge:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px var(--shadow-primary);
+        }
+
+        .trust-badge .icon {
+            color: var(--success-teal);
+            font-size: 1.2rem;
+        }
+
+        .trust-badge span {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background: rgba(30, 58, 47, 0.1);
+            color: var(--primary-green);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--medium-sage);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            border: 1px solid var(--border-gray);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px var(--shadow-primary);
+            border-color: var(--primary-green);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.05);
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--medium-sage);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s ease;
+        }
+
+        .service-link:hover {
+            gap: 0.75rem;
+        }
+
+        .service-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-link i {
+            transform: translateX(2px);
+        }
+
+        /* Stats Section */
+        .stats {
+            padding: 4rem 0;
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+
+        /* Mission & Vision */
+        .mission-vision {
+            padding: 6rem 0;
+            background: var(--warm-gray);
+        }
+
+        .mv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .mv-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-gray);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .mv-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px var(--shadow-primary);
+        }
+
+        .mv-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .mv-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .mv-card p {
+            color: var(--medium-sage);
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--warm-gray);
+            border-radius: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(30, 58, 47, 0.05);
+        }
+
+        .contact-item .icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item-content h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item-content p {
+            color: var(--medium-sage);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-gray);
+            box-shadow: 0 4px 20px var(--shadow-primary);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            background: var(--warm-gray);
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(30, 58, 47, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background: var(--gradient-primary);
+            color: var(--accent-gold);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            font-size: 0.95rem;
+            font-family: inherit;
+            box-shadow: 0 4px 12px var(--shadow-primary);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px var(--shadow-primary);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--deep-green);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent-gold);
+            transform: translateY(-1px);
+        }
+
+        .footer-section h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--accent-gold);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+                padding-top: 2rem;
+            }
+
+            .hero-visual {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+
+            .mv-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 100px;
+                min-height: calc(100vh - 20px);
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .hero-visual {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .metric-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .metric-card h3 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+                margin-bottom: 1rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+                padding: 1rem 1.5rem;
+            }
+
+            .trust-section {
+                padding: 3rem 0;
+            }
+
+            .trust-logos {
+                gap: 1rem;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-badge {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .stat-item {
+                padding: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .mv-container {
+                gap: 2rem;
+            }
+
+            .mv-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .contact-container {
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0.75rem 1rem;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .logo-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero {
+                padding-top: 80px;
+            }
+
+            .hero-container {
+                padding: 0.5rem;
+            }
+
+            .hero-visual {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .metric-card {
+                padding: 1.25rem 1rem;
+            }
+
+            .metric-card .icon {
+                font-size: 1.5rem;
+            }
+
+            .metric-card h3 {
+                font-size: 1.6rem;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(1.8rem, 7vw, 2.2rem);
+            }
+
+            .hero-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .trust-section {
+                padding: 2rem 0;
+            }
+
+            .trust-container {
+                padding: 0 1rem;
+            }
+
+            .trust-badge {
+                padding: 0.75rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .services-container,
+            .stats-container,
+            .mv-container,
+            .contact-container,
+            .footer-container {
+                padding: 0 1rem;
+            }
+
+            .section-header h2 {
+                font-size: clamp(1.8rem, 6vw, 2.2rem);
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .service-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .service-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .service-card p {
+                font-size: 0.9rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .mv-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .mv-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .mv-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem 1rem;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 0.8rem;
+                font-size: 0.9rem;
+            }
+
+            .submit-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .footer {
+                padding: 3rem 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-anchor"></i>
+                </div>
+                EDAK
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Get Started</a>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">🇳🇬 Nigeria's Premier Marine & Logistics Partner</div>
+                <h1>Excellence in Marine Logistics & Expatriate Services</h1>
+                <p>Comprehensive marine operations support, expatriate workforce management, and regulatory compliance solutions for international companies navigating Nigeria's maritime sector.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn-primary">Explore Services</a>
+                    <a href="#contact" class="btn-secondary">Start Project</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="metric-card">
+                    <div class="icon"><i class="fas fa-certificate"></i></div>
+                    <h3>100%</h3>
+                    <p>Compliance Rate</p>
+                </div>
+                <div class="metric-card">
+                    <div class="icon"><i class="fas fa-ship"></i></div>
+                    <h3>15+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="metric-card">
+                    <div class="icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7</h3>
+                    <p>Marine Support</p>
+                </div>
+                <div class="metric-card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h3>200+</h3>
+                    <p>Crew Deployments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="trust-section">
+        <div class="trust-container">
+            <p class="trust-text">Trusted by leading international marine and logistics companies</p>
+            <div class="trust-logos">
+                <div class="trust-badge">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <span>NIMASA Certified</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon"><i class="fas fa-check-circle"></i></div>
+                    <span>STCW Compliant</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon"><i class="fas fa-globe"></i></div>
+                    <span>IMO Standards</span>
+                </div>
+                <div class="trust-badge">
+                    <div class="icon"><i class="fas fa-award"></i></div>
+                    <span>ISO 9001 Certified</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <div class="section-header">
+                <div class="section-tag">Core Expertise</div>
+                <h2>Comprehensive Marine & Logistics Solutions</h2>
+                <p>Specialized services for international companies requiring marine operations support, expatriate workforce management, and regulatory compliance in Nigeria</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <h3>Expatriate Immigration Services</h3>
+                    <p>Complete visa processing, work permit applications, and immigration compliance for international marine personnel. Specialized handling of COMB (Combined Expatriate Residence Permit & Alien Card) applications, quota allocations, and expedited processing for critical operations.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Marine Workforce Management</h3>
+                    <p>End-to-end expatriate personnel support including pre-deployment briefings, accommodation management, medical clearances, safety training coordination, cultural orientation, and ongoing welfare support for offshore operations.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Marine Crewing & Operations</h3>
+                    <p>Certified marine personnel recruitment and deployment for offshore vessels, drill ships, and support vessels. Complete STCW certification management, crew rotation planning, and emergency crew replacement services with 24/7 availability.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <h3>Marine Logistics & Supply Chain</h3>
+                    <p>Comprehensive logistics solutions including port operations coordination, cargo handling, customs clearance, offshore supply management, heavy lift operations, and specialized transportation for marine equipment and supplies.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Maritime Regulatory Compliance</h3>
+                    <p>Expert guidance on Nigerian Maritime Administration and Safety Agency (NIMASA) regulations, port state control requirements, vessel registration, maritime security compliance, and ongoing regulatory monitoring with impact assessments.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Technical Advisory & Risk Management</h3>
+                    <p>Strategic consulting on marine operations optimization, regulatory risk assessment, local content development, maritime security planning, and market intelligence for complex offshore and logistics operations.</p>
+                    <a href="#contact" class="service-link">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">200+</span>
+                <div class="stat-label">Crew Deployments</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <div class="stat-label">Years in Marine Sector</div>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">5000+</span>
+                <div class="stat-label">Visas Processed</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision" id="about">
+        <div class="mv-container">
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To deliver exceptional marine logistics and expatriate workforce solutions that enable international companies to operate safely, efficiently, and compliantly in Nigeria's maritime sector while fostering sustainable local partnerships and community development.</p>
+            </div>
+            <div class="mv-card">
+                <div class="mv-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To be the most trusted and reliable partner for international marine and logistics operations in West Africa, setting the industry standard for regulatory compliance, operational excellence, and expatriate workforce management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Ready to Launch Your Marine Operations?</h2>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-item-content">
+                        <h4>Corporate Headquarters</h4>
+                        <p>Abuja, Federal Capital Territory<br>Nigeria</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-anchor"></i></div>
+                    <div class="contact-item-content">
+                        <h4>Marine Operations Hub</h4>
+                        <p>Warri, Delta State<br>Nigeria</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-globe-africa"></i></div>
+                    <div class="contact-item-content">
+                        <h4>Service Coverage</h4>
+                        <p>Nigerian Territorial Waters, Major Ports: Lagos, Port Harcourt, Warri, Calabar</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                    <div class="contact-item-content">
+                        <h4>24/7 Marine Support</h4>
+                        <p>Emergency visa processing, crew changes, and logistics support for critical marine operations</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="company">Company Name *</label>
+                        <input type="text" id="company" name="company" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">Select a service</option>
+                            <option value="immigration">Expatriate Immigration Services</option>
+                            <option value="workforce">Marine Workforce Management</option>
+                            <option value="crewing">Marine Crewing & Operations</option>
+                            <option value="logistics">Marine Logistics & Supply Chain</option>
+                            <option value="compliance">Maritime Regulatory Compliance</option>
+                            <option value="advisory">Technical Advisory & Risk Management</option>
+                            <option value="multiple">Multiple Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" placeholder="Describe your marine operations requirements, vessel types, crew needs, timeline, and any specific compliance or logistics challenges..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane" style="margin-right: 0.5rem;"></i>
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>EDAK Global Services</h3>
+                    <p>Your trusted partner for marine logistics, expatriate workforce management, and regulatory compliance in Nigeria's maritime sector. Delivering excellence in offshore operations support.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Marine Services</h4>
+                    <ul>
+                        <li><a href="#services">Expatriate Immigration</a></li>
+                        <li><a href="#services">Marine Workforce</a></li>
+                        <li><a href="#services">Vessel Crewing</a></li>
+                        <li><a href="#services">Logistics Solutions</a></li>
+                        <li><a href="#services">Compliance Advisory</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Marine Careers</a></li>
+                        <li><a href="#">Industry News</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Operations Manual</a></li>
+                        <li><a href="#">Compliance FAQ</a></li>
+                        <li><a href="#">Emergency Support</a></li>
+                        <li><a href="#">Client Portal</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EDAK Global Services Limited. All rights reserved. | Licensed Marine Services Provider, Nigeria</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalContent = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate form processing
+            setTimeout(() => {
+                // Show success state
+                submitBtn.innerHTML = '<i class="fas fa-check" style="margin-right: 0.5rem;"></i>Message Sent!';
+                submitBtn.style.background = 'var(--success-teal)';
+                
+                setTimeout(() => {
+                    alert('Thank you for your inquiry! Our marine operations team will contact you within 24 hours to discuss your requirements.');
+                    this.reset();
+                    submitBtn.innerHTML = originalContent;
+                    submitBtn.style.background = '';
+                    submitBtn.disabled = false;
+                }, 1500);
+            }, 2000);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            const isVisible = navLinks.style.display === 'flex';
+            navLinks.style.display = isVisible ? 'none' : 'flex';
+            
+            if (!isVisible) {
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'var(--primary-green)';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 4px 12px rgba(0,0,0,0.3)';
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (!mobileMenu.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.style.display = 'none';
+            }
+        });
+
+        // Form validation enhancements
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                if (this.hasAttribute('required') && !this.value) {
+                    this.style.borderColor = '#dc2626';
+                } else {
+                    this.style.borderColor = 'var(--border-gray)';
+                }
+            });
+
+            input.addEventListener('focus', function() {
+                this.style.borderColor = 'var(--primary-green)';
+            });
+        });
+
+        // Accessibility improvements
+        document.querySelectorAll('button, a, input, select, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.style.outline = '2px solid var(--accent-gold)';
+                this.style.outlineOffset = '2px';
+            });
+            
+            element.addEventListener('blur', function() {
+                this.style.outline = 'none';
+            });
+        });
+
+        // Enhanced interaction effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.background = 'var(--off-white)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.background = 'white';
+            });
+        });
+    </script>
+</body>
+</html>
